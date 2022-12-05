@@ -5,7 +5,9 @@ int main()
 {
     const int n = 10;
     std::vector<int> sequence = makeVector(n);
-    std::cout<< "Made a vector with "<< n<< " integers that range from 0 to "<< n-1<< "\n";
+    std::cout<< "Made a vector with "<< n<< " integers that range from 0 to "<< n-1<< ":\n";
+    print(sequence);
+    std::cout<< "\n";
 
     std::cout<< "\n-------------------------------------------------\n";
 
@@ -15,7 +17,7 @@ int main()
     std::cout<< "Return only positives from vector ";
     print(original);
 
-    std::cout<< "\n Turning it into ";
+    std::cout<< "\nTurning it into ";
     print(positive);
     std::cout<< "\n";
 
@@ -33,8 +35,20 @@ int main()
 
     std::cout<< "\nMade vector ";
     print(first);
+    std::cout<< "\n";
 
     std::cout<< "\n-------------------------------------------------\n";
+    std::vector<int> v1{1,2,3};
+    std::vector<int> v2{4,5};
+
+    std::cout<< "Pairwise sum of vector ";
+    print(v1);
+    std::cout<< " and vector ";
+    print(v2);
+    std::cout<< "\nis vector ";
+    print(sumPairWise(v1,v2));
+    std::cout<< "\n";
+    
     return 0;
 }
 

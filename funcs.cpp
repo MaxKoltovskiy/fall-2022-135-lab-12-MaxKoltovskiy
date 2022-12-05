@@ -23,5 +23,29 @@ void gogeta(std::vector<int> &goku, std::vector<int> &vegeta) {
     for(int i = 0; i< vegeta.size(); i++) {
         goku.push_back(vegeta[i]);
     }
+}
 
+std::vector<int> sumPairWise(const std::vector<int> &v1, const std::vector<int> &v2) {
+    std::vector<int> pairwise;
+    int n = v1.size();
+
+    for(int i = 0; i< n; i++) {
+        int one, two;
+        if(i>= v1.size()) {
+            one = 0;
+        }
+        else {
+            one = v1[i];
+        }
+
+        if(i>= v2.size()) {
+            two = 0;
+        }
+        else {
+            two = v2[i];
+        }
+        pairwise.push_back(one+two);
+    }
+
+    return pairwise;
 }

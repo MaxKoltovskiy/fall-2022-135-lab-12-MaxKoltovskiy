@@ -17,3 +17,8 @@ TEST_CASE("Combined vectors"){
     gogeta(v1,v2);
     CHECK(v1 == std::vector<int>{1,2,3,4,5,6,7});
 }
+TEST_CASE("Pair wise sum"){
+    std::vector<int> v1{2,3,4,5,6,7};
+    std::vector<int> v2{2,2,1,5};
+    CHECK(sumPairWise(v1,v2) == std::vector<int>{4,5,5,10,6,7});
+}
